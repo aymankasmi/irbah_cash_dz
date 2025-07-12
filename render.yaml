@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: irbah_cash_dz_bot
+    env: python
+    buildCommand: ""
+    startCommand: python bot.py
+    repo: https://github.com/aymankasmi/irbah_cash_dz
+    branch: main
+    plan: free
