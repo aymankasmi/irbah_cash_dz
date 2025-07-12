@@ -1,8 +1,8 @@
 services:
-  - type: worker
+  - type: web
     name: irbah_cash_dz_bot
     env: python
-    buildCommand: ""
+    buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
     repo: https://github.com/aymankasmi/irbah_cash_dz
     branch: main
