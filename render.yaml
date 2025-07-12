@@ -1,9 +1,11 @@
 services:
-  - type: worker
-    name: irbah_cash_dz_bot
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python bot.py
-    repo: https://github.com/aymankasmi/irbah_cash_dz
-    branch: main
+  - type: web
+    name: irbah-cash-dz-bot
+    runtime: python
     plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: API_TOKEN
+        value: "6150770166:AAHZr2GfSv5h_oXvK7Wcwksml5KGlixxxxxxxxx"
+    autoDeploy: true
